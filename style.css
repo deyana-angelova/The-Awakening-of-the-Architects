@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Part One Background */
+.background-index {
+    background-image: url('images/index1.jpg') !important; 
+}
+.background-partOne {
+    background-image: url('images/erebos-9.jpg'); 
+}
+
+/* Part Two Background */
+.background-partTwo {
+    background-image: url('images/ship1.jpg');
+}
+
+/* Part Three Background */
+.background-partThree {
+    background-image: url('images/colony1.jpg');
+}
+.background-partFive {
+    background-image: url('images/alien_city2.jpg');
+}
+
+/* Nav bar */
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    padding: 15px 0;
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background: #f0c674;
+    color: black;
+}
+
+
+nav ul .home-button {
+    margin-right: auto; /* Pushes it to the left */
+    margin-left: 20px;
+}
+/* Main content area */
+main {
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Dark background overlay */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+}
+/* Character Portraits */
+.character-portraits {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f0c674;
+    margin-bottom: 8px;
+}
+
+/* Special effect for corrupted AI name */
+.character-name.corrupted {
+    color: #ff3b3b;
+    text-shadow: 0px 0px 8px red;
+    animation: glitchText 1s infinite;
+}
+
+/* Character circle for portraits */
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f0c674;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle img {
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+}
+
+.circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(240, 198, 116, 0.8);
+}
+
+/* Special effect for corrupted AI */
+.corrupted-ai {
+    border: 5px solid #ff3b3b;
+    box-shadow: 0px 0px 15px red;
+    animation: glitchEffect 0.5s infinite;
+}
+
+/* Glitch effect animations */
+@keyframes glitchEffect {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(2px); }
+    50% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes glitchText {
+    0% { transform: skewX(0deg); }
+    20% { transform: skewX(10deg); }
+    40% { transform: skewX(-10deg); }
+    60% { transform: skewX(10deg); }
+    80% { transform: skewX(-10deg); }
+    100% { transform: skewX(0deg); }
+}
+
+/* Heading and Paragraph */
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+/* Next Button */
+.next-button-container {
+    margin-top: 40px;
+}
+
+.next-button {
+    background: #f0c674;
+    color: black;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.next-button:hover {
+    background: #ffb14e;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #f0c674;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Content section with overlay */
+.content {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text contrast */
+    color: #f0c674; /* Sci-fi golden text */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 70%;
+    font-size: 18px;
+    box-shadow: 0px 0px 20px rgba(255, 165, 0, 0.4); /* Sci-fi glow effect */
+}
+
+
+/* Fix for Part 1 Text and the Navbar */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+/* Ensure that the content does not overlap */
+main > .character-portraits, main > .next-button-container {
+    margin-top: 40px;
+}
+
+/* Additional styling for character portraits */
+.character-portraits {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.character-portraits img {
+    transition: all 0.3s ease;
+}
+
+.character-portraits img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(240, 198, 116, 0.8);
+}
+/* Panel below text */
+.panel {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%; /* Makes the panel width responsive */
+    max-width: 1000px; /* Sets a max width for larger screens */
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(240, 198, 116, 0.8); /* Sci-fi glowing effect */
+    text-align: center;
+    font-size: 18px;
+    color: #f0c674; /* Text color matching the theme */
+    line-height: 1.8;
+    backdrop-filter: blur(10px); /* Adds a blur effect to the background behind the panel */
+}
+
+/* Add a cool glowing border effect */
+.panel:hover {
+    box-shadow: 0 0 25px rgba(240, 198, 116, 1); /* Brighter glow on hover */
+}
